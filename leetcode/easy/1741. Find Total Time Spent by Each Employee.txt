@@ -1,0 +1,17 @@
+/* Write your T-SQL query statement below */
+SELECT 
+        event_day AS day,
+        emp_id,
+        SUM(out_time - in_time) AS total_time
+
+FROM Employees
+GROUP BY emp_id,event_day
+
+-- any column previous aggregate function must be writen in group by statement
+
+/*
+	Runtime Error
+	column "employees.event_day" must appear in the GROUP BY clause or 
+	be used in an aggregate function
+	LINE 3:         event_day AS day,
+*/

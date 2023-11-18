@@ -1,27 +1,34 @@
 # Write your MySQL query statement below
 # WRONG IN MYSQL
-SELECT date_id , make_name ,
-        COUNT (DISTINCT (lead_id)) AS unique_leads ,
+SELECT 
+		date_id, 
+		make_name,
+        COUNT (DISTINCT (lead_id)) AS unique_leads,
         COUNT (DISTINCT (partner_id)) AS unique_partners 
+		
     FROM DailySales
-    GROUP BY date_id,make_name;
+    GROUP BY date_id , make_name;
 
 ###COUNT (DISTINCT (lead_id)) AS unique_leads 
 WRONG ANSWER IN SPACE REMOVE IT
 
 # Write your MySQL query statement below
-SELECT date_id , make_name,
+SELECT 
+		date_id, 
+		make_name,
         COUNT(DISTINCT (lead_id)) AS unique_leads,
         COUNT(DISTINCT (partner_id)) AS unique_partners
-    FROM DailySales
-    GROUP BY date_id,make_name;
-
-
+    
+	FROM DailySales
+    GROUP BY date_id , make_name;
 
 /* Write your T-SQL query statement below */
 /* RIGHT IN SQL SERVER*/
-SELECT date_id , make_name ,
-        COUNT (DISTINCT (lead_id)) AS unique_leads ,
+SELECT 
+		date_id, 
+		make_name 
+        COUNT (DISTINCT (lead_id)) AS unique_leads,
         COUNT (DISTINCT (partner_id)) AS unique_partners 
-    FROM DailySales
-    GROUP BY date_id,make_name;
+    
+	FROM DailySales
+    GROUP BY date_id , make_name;

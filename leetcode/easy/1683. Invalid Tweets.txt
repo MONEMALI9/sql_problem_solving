@@ -1,4 +1,12 @@
 # Write your MySQL query statement below
+-- length on Mysql	==>> LENGTH()
 SELECT tweet_id
     FROM Tweets
     WHERE length(content)>15;  
+	
+	
+-- length on MS sql server 	==>> LEN()
+/* Write your T-SQL query statement below */
+SELECT tweet_id
+    FROM Tweets
+    WHERE LEN(content) > 15;  

@@ -1,0 +1,12 @@
+# Write your MySQL query statement below
+UPDATE Salary SET sex = 
+  case
+    when sex ='m' then 'f'
+    when sex='f' then 'm'
+  END
+
+
+-- Write your PostgreSQL query statement below
+-- this solution error in postgersql
+this solution error in mysql
+UPDATE Salary SET sex=IIF('m'=sex,'f','m')
